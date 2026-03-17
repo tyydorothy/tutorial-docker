@@ -2,7 +2,7 @@
 
 This is a tutorial for setting up docker for bioinformatics use.
 
-This repo using vscode with docker-related extension installed.
+This repository uses vscode with docker-related extension installed.
 
 ##### Set Up 
 

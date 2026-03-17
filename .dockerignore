@@ -1,0 +1,6 @@
+.snakemake/
+results/
+.git/
+__pycache__/
+*.pyc
+env/

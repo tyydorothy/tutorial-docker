@@ -18,7 +18,7 @@ Build image: `$ docker build -t tutorial:v1.0 .`
 
 List all images in your local docker: `$ docker images`
 
-Create container with project mounted: `docker run -it -v $(pwd):/data tutorial:v1.0 bash`
+Create container with project mounted: `docker run -it --name tutorial_container -v $(pwd):/data tutorial:v1.0 bash`
 
 - `-it`: interactive terminal
 - `-v $(pwd):/data`: mount project into container
@@ -28,6 +28,9 @@ Create container with project mounted: `docker run -it -v $(pwd):/data tutorial:
 Reuse the container: 
 - `docker start tutorial_container`
 - `docker exec -it tutorial_container bash`
+
+Remove container:
+- `docker rm tutorial_container`
 
 Exit docker:
 - `exit`

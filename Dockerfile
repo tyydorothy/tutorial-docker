@@ -17,7 +17,10 @@ COPY environment.yaml .
 # RUN: exec cmd that build and config the Docker image
 RUN conda env create -f environment.yaml
 
-# make conda environment activate automatically when image is built
+# allow conda command in bash
+RUN conda init bash
+
+# activate conda environment  automatically when image is built
 RUN echo "conda activate tut-docker" >> ~/.bashrc
 
 # CMD: specify the default command to run when a container is started from the Docker image
